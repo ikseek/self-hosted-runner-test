@@ -3,6 +3,8 @@ on: push
 jobs:
   my-job:
     runs-on: self-hosted
+    container:
+      image: python:3.13
     steps:
       - name: my-step
-        run: echo "Hello World!"
+        run: python --version
